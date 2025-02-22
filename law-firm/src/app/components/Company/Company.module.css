@@ -1,0 +1,102 @@
+.companySection {
+  position: relative;
+  background-color: #faf9f4;
+  padding-top: 460px;
+}
+
+.companyDescriptionThumb {
+  position: absolute;
+  bottom: 42%;
+  left: 50%;
+  transform: translate(-50%, -42%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 86px;
+  height: 506px;
+  width: 90%;
+  /* max-width: 1300px; */
+  z-index: 100;
+}
+
+.companyTitle {
+  overflow: hidden;
+  color: #bd9a4a;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Mulish";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.companyTitleHighlighted {
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+.companySubtitle {
+  color: #000;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.companyTitleThumb {
+  max-width: 585px;
+}
+.aboutImage {
+  margin-left: 100px;
+  width: 50%;
+  height: 320px;
+}
+.companyServicesList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1300px;
+  margin-bottom: 60px;
+}
+.serviceItem {
+  flex: 1 1 calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.itemImage {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+.serviceItem:nth-last-child(n + 4) {
+  margin-bottom: 114px;
+}
+
+.serviceItemName {
+  color: #604b33;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-family: "Mulish";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.serviceItemDescription {
+  color: #000;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 240px;
+}
