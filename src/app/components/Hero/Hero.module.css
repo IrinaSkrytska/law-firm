@@ -6,7 +6,12 @@
   background-size: cover;
   padding-bottom: 100px;
 }
-
+.coatOfArmsIcon {
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%, -24%);
+}
 .heroTitle {
   max-width: 882px;
   display: block;
