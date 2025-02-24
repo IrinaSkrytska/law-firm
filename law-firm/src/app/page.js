@@ -7,6 +7,9 @@ import Container from "./components/Container/Container";
 import CallBack from "./components/CallBack/CallBack";
 import Experience from "./components/Experience/Experience";
 import Reviews from "./components/Reviews/Reviews";
+import Consultation from "./components/Consultation/Consultation";
+import Partners from "./components/Partners/Partners";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +20,9 @@ export default function Home() {
         <CallBack />
         <Experience />
         <Reviews />
+        <Consultation />
+        <Partners />
+        <Footer />
       </Container>
     </>
   );

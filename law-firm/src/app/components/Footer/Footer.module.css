@@ -1,1 +1,121 @@
+.footerSection {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  background-color: #000;
+}
+.logo {
+  margin-bottom: 24px;
+}
+.authorRightsText {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 26px;
+  margin-bottom: 24px;
+  max-width: 300px;
+}
+.socialMediaList {
+  display: flex;
+}
+.socialMediaItem:not(:last-child) {
+  margin-right: 12px;
+}
+.menuTitle {
+  color: #fff;
+  font-family: "Mulish";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 32px;
+}
+.menuItem {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.menuItem:not(:last-child) {
+  margin-bottom: 24px;
+}
 
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.addressText {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.meetingText {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+.phone {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 24px;
+}
+.email {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.last {
+  margin-bottom: 70px;
+}
+.contactUsText {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  margin-bottom: 30px;
+}
+.footerThumb {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.SpitzumLogo {
+  margin-left: 6px;
+}

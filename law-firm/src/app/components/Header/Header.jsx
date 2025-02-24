@@ -57,7 +57,7 @@ export default function Header() {
         </ul>
         <p className={css.phoneText}>
           <Phone className={css.phoneIcon} />
-          +380 (99) 111-1111
+          <a href={`tel:+380 (66) 123-37-71`}>+380 (66) 123-37-71</a>
         </p>
       </nav>
     </div>

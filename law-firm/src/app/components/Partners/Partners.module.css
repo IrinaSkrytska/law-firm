@@ -1,0 +1,39 @@
+.partnersSection {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.partnersTitle {
+  color: #604b33;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-family: "Mulish";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+.partnersList {
+  display: flex;
+  justify-content: center;
+}
+.partnerItem:not(:last-child) {
+  margin-right: 24px;
+}
+.partnerImage {
+  height: 280px;
+  width: 320px;
+  margin-bottom: 8px;
+}
+.partnerName {
+  color: #604b33;
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  max-width: 300px;
+}
