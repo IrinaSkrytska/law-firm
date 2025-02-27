@@ -2,38 +2,144 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and ((max-width: 479px)) {
+  .partnersTitle {
+    color: #604b33;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .partnersTitle {
+    color: #604b33;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Mulish";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .partnersTitle {
+    color: #604b33;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Mulish";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .partnersTitle {
+    color: #604b33;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Mulish";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .partnersList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .partnersList {
+    display: flex;
+    justify-content: center;
+  }
 
-.partnersTitle {
-  color: #604b33;
-  text-align: center;
-  text-overflow: ellipsis;
-  font-family: "Mulish";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 40px;
+  .partnerItem:not(:last-child) {
+    margin-right: 24px;
+  }
 }
-.partnersList {
-  display: flex;
-  justify-content: center;
+@media screen and ((max-width: 767px)) {
+  .partnerItem:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
-.partnerItem:not(:last-child) {
-  margin-right: 24px;
+@media screen and ((max-width: 479px)) {
+  .partnerImage {
+    height: 260px;
+    width: 300px;
+    margin-bottom: 8px;
+  }
 }
-.partnerImage {
-  height: 280px;
-  width: 320px;
-  margin-bottom: 8px;
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .partnerImage {
+    height: 260px;
+    width: 300px;
+    margin-bottom: 8px;
+  }
 }
-.partnerName {
-  color: #604b33;
-  text-align: center;
-  font-family: "Mulish";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-  max-width: 300px;
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .partnerImage {
+    height: 260px;
+    width: 300px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .partnerImage {
+    height: 280px;
+    width: 320px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and ((max-width: 767px)) {
+  .partnerName {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    max-width: 300px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .partnerName {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .partnerName {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    max-width: 300px;
+  }
 }

@@ -10,6 +10,7 @@ import Reviews from "./components/Reviews/Reviews";
 import Consultation from "./components/Consultation/Consultation";
 import Partners from "./components/Partners/Partners";
 import Footer from "./components/Footer/Footer";
+import News from "./components/News/News";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Experience />
         <Reviews />
         <Consultation />
+        <News />
         <Partners />
         <Footer />
       </Container>

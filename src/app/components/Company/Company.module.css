@@ -3,100 +3,407 @@
   background-color: #faf9f4;
   padding-top: 460px;
 }
-
-.companyDescriptionThumb {
-  position: absolute;
-  bottom: 42%;
-  left: 50%;
-  transform: translate(-50%, -42%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 86px;
-  height: 506px;
-  width: 90%;
-  /* max-width: 1300px; */
-  z-index: 100;
+@media screen and ((max-width: 479px)) {
+  .companyDescriptionThumb {
+    position: absolute;
+    bottom: 53%;
+    left: 50%;
+    transform: translate(-50%, -53%);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #fff;
+    padding: 30px 50px;
+    min-height: 500px;
+    width: 90%;
+    /* max-width: 1300px; */
+    z-index: 100;
+  }
 }
-
-.companyTitle {
-  overflow: hidden;
-  color: #bd9a4a;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-family: "Mulish";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-  margin-bottom: 20px;
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .companyDescriptionThumb {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #fff;
+    padding: 30px 50px;
+    min-height: 560px;
+    width: 90%;
+    /* max-width: 1300px; */
+    z-index: 100;
+  }
+  .companyDescriptionThumb > * {
+    flex: 1; /* Ensures equal height distribution */
+  }
 }
-.companyTitleHighlighted {
-  font-family: "Inter";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .companyDescriptionThumb {
+    position: absolute;
+    bottom: 42%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px 50px;
+    min-height: 530px;
+    max-height: 550px;
+    width: 90%;
+    /* max-width: 1300px; */
+    z-index: 100;
+  }
 }
-.companySubtitle {
-  color: #000;
-  font-family: "Inter";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
+@media screen and (min-width: 1200px) {
+  .companyDescriptionThumb {
+    position: absolute;
+    bottom: 42%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 86px;
+    height: 506px;
+    width: 90%;
+    /* max-width: 1300px; */
+    z-index: 100;
+  }
 }
+@media screen and ((max-width: 479px)) {
+  .companyTitle {
+    text-align: center;
+    overflow: hidden;
+    color: #bd9a4a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Mulish";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .companyTitle {
+    text-align: center;
+    overflow: hidden;
+    color: #bd9a4a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Mulish";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .companyTitle {
+    overflow: hidden;
+    color: #bd9a4a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Mulish";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .companyTitle {
+    overflow: hidden;
+    color: #bd9a4a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Mulish";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .companyTitleHighlighted {
+    text-align: center;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .companyTitleHighlighted {
+    text-align: center;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .companyTitleHighlighted {
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .companySubtitle {
+    text-align: center;
+    color: #000;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .companySubtitle {
+    text-align: center;
+    color: #000;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .companySubtitle {
+    color: #000;
+    font-family: "Inter";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .companySubtitle {
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
+/* @media screen and ((min-width: 768px) and (max-width: 1200px)) {
 .companyTitleThumb {
   max-width: 585px;
+}} */
+@media screen and (min-width: 1200px) {
+  .companyTitleThumb {
+    max-width: 585px;
+  }
 }
-.aboutImage {
-  margin-left: 100px;
-  width: 50%;
-  height: 320px;
+@media screen and ((max-width: 479px)) {
+  .aboutImage {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    /* max-height: 280px; */
+    margin-bottom: 20px;
+  }
 }
-.companyServicesList {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1300px;
-  margin-bottom: 60px;
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .aboutImage {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    margin-bottom: 20px;
+  }
 }
-.serviceItem {
-  flex: 1 1 calc(33.33% - 20px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .aboutImage {
+    margin-left: 50px;
+    width: 50%;
+    height: 320px;
+  }
 }
-.itemImage {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
+@media screen and (min-width: 1200px) {
+  .aboutImage {
+    margin-left: 100px;
+    width: 50%;
+    height: 320px;
+  }
 }
-.serviceItem:nth-last-child(n + 4) {
-  margin-bottom: 114px;
+@media screen and ((min-width: 768px) and (max-width: 1200px)) {
+  .companyServicesList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* max-width: 1300px; */
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .companyServicesList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1300px;
+    margin-bottom: 60px;
+  }
 }
 
-.serviceItemName {
-  color: #604b33;
-  text-align: center;
-  text-overflow: ellipsis;
-  font-family: "Mulish";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 12px;
+@media screen and ((max-width: 1199px)) {
+  .serviceItem {
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-.serviceItemDescription {
-  color: #000;
-  text-align: center;
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  max-width: 240px;
+@media screen and (min-width: 1200px) {
+  .serviceItem {
+    flex: 1 1 calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .itemImage {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .itemImage {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .itemImage {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and ((max-width: 767px)) {
+  .serviceItem:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .serviceItem:nth-last-child(n + 4) {
+    margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .serviceItem:nth-last-child(n + 4) {
+    margin-bottom: 114px;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .serviceItemName {
+    text-wrap: nowrap;
+    color: #604b33;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Mulish";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 1199px)) {
+  .serviceItemName {
+    text-wrap: nowrap;
+    color: #604b33;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .serviceItemName {
+    text-wrap: nowrap;
+    color: #604b33;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Mulish";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and ((max-width: 767px)) {
+  .serviceItemDescription {
+    color: #000;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* max-width: 240px; */
+  }
+}
+
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .serviceItemDescription {
+    color: #000;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 240px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .serviceItemDescription {
+    color: #000;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 240px;
+  }
 }

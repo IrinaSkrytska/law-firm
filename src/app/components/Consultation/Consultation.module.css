@@ -8,40 +8,127 @@
     ),
     url(../../images/ConsultationBg.jpg) lightgray 50% / cover no-repeat;
 }
-.consultationThumb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
+@media screen and (min-width: 1200px) {
+  .consultationThumb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
 }
-.consultationTextThumb {
-  width: 50%;
+@media screen and (min-width: 1200px) {
+  .consultationTextThumb {
+    width: 50%;
+  }
 }
-.logo {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 40px;
+@media screen and ((max-width: 479px)) {
+  .logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
-.consultationTitle {
-  text-align: center;
-  color: #fff;
-  font-family: "Mulish";
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 40px;
+@media screen and ((min-width: 480px) and (max-width: 1199px)) {
+  .logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .consultationTitle {
+    text-align: center;
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .consultationTitle {
+    text-align: center;
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .consultationTitle {
+    text-align: center;
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .consultationTitle {
+    text-align: center;
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
 }
 .highlightedText {
   color: #bd9a4a;
 }
-.consultationText {
-  text-align: center;
-  color: #fff;
-  text-overflow: ellipsis;
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26px;
+
+@media screen and ((max-width: 479px)) {
+  .consultationText {
+    text-align: center;
+    color: #fff;
+    text-overflow: ellipsis;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 1199px)) {
+  .consultationText {
+    text-align: center;
+    color: #fff;
+    text-overflow: ellipsis;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .consultationText {
+    text-align: center;
+    color: #fff;
+    text-overflow: ellipsis;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+  }
 }

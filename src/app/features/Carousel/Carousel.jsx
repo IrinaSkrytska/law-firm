@@ -32,13 +32,15 @@ const Carousel = (props) => {
               className={`${css.reviewThumb} ${css.embla__slide}`}
             >
               <div className={css.reviewTextThumb}>
-                <Image
-                  className={css.quotesIcon}
-                  width={40}
-                  height={40}
-                  src={Quotes}
-                />
-                <div className={css.line}></div>
+                <div className={css.quotesThumb}>
+                  <Image
+                    className={css.quotesIcon}
+                    width={40}
+                    height={40}
+                    src={Quotes}
+                  />
+                  <div className={css.line}></div>
+                </div>
                 <div>
                   <p className={css.reviewText}>
                     "Професійний підхід та високий рівень обслуговування!

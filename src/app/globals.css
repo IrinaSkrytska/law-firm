@@ -23,8 +23,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-section {
-  padding: 20px 70px;
+@media screen and (max-width: 479px) {
+  section {
+    padding: 16px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and ((min-width: 480px) and (max-width: 1200px)) {
+  section {
+    padding: 32px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  section {
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+  }
 }
 
 * {

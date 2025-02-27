@@ -1,53 +1,31 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import css from "./Header.module.css";
 import Logo from "../../images/Logo.png";
+import LogoBlack from "../../images/LogoBlack.png";
 import Phone from "@/app/images/icons/Phone";
+import MobileMenu from "@/app/images/icons/MobileMenu";
+import Cross from "@/app/images/icons/Cross";
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const pagesArray = [
-    {
-      _id: 1,
-      name: "Головна",
-      link: "/",
-    },
-    {
-      _id: 2,
-      name: "Про нас",
-      link: "/about-us",
-    },
-    {
-      _id: 3,
-      name: "Послуги",
-      link: "/services",
-    },
-    {
-      _id: 4,
-      name: "Послуги",
-      link: "/services",
-    },
-    {
-      _id: 5,
-      name: "Послуги для ветеранів",
-      link: "/services-for-veterans",
-    },
-    {
-      _id: 6,
-      name: "Новини",
-      link: "/news",
-    },
-    {
-      _id: 7,
-      name: "Контакти",
-      link: "/contacts",
-    },
+    { _id: 1, name: "Головна", link: "/" },
+    { _id: 2, name: "Про нас", link: "/about-us" },
+    { _id: 3, name: "Послуги", link: "/services" },
+    { _id: 4, name: "Послуги для ветеранів", link: "/services-for-veterans" },
+    { _id: 5, name: "Новини", link: "/news" },
+    { _id: 6, name: "Контакти", link: "/contacts" },
   ];
 
   return (
     <div className={css.headerSection}>
       <nav className={css.navigation}>
-        <Image className={css.logo} src={Logo} />
+        <Image className={css.logo} src={Logo} alt="Logo" />
+
         <ul className={css.itemsList}>
           {pagesArray.map((item) => (
             <li className={css.item} key={item._id}>
@@ -55,9 +33,41 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <p className={css.phoneText}>
-          <Phone className={css.phoneIcon} />
-          <a href={`tel:+380 (66) 123-37-71`}>+380 (66) 123-37-71</a>
+
+        {/* <button className={css.mobileMenuButton} aria-label="Toggle menu"> */}
+        {isMobileMenuOpen ? (
+          <Cross
+            className={css.cross}
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        ) : (
+          <MobileMenu
+            onClick={() => setIsMobileMenuOpen(true)}
+            className={css.mobileMenuIcon}
+          />
+        )}
+        {/* </button> */}
+
+        {isMobileMenuOpen && (
+          <div className={css.mobileMenu}>
+            <Image className={css.mobileLogo} src={LogoBlack} alt="Logo" />
+            <ul className={css.mobileMenuList}>
+              {pagesArray.map((item) => (
+                <li className={css.item} key={item._id}>
+                  {item.name}
+                </li>
+              ))}
+            </ul>
+            <p className={css.phoneText}>
+              <Phone color={"black"} className={css.phoneIcon} />
+              <a href={`tel:+380661233771`}>+380 (66) 123-37-71</a>
+            </p>
+          </div>
+        )}
+
+        <p className={css.desktopPhoneText}>
+          <Phone color={"white"} className={css.phoneIcon} />
+          <a href={`tel:+380661233771`}>+380 (66) 123-37-71</a>
         </p>
       </nav>
     </div>

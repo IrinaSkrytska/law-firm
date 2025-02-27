@@ -51,12 +51,22 @@ export default function Footer() {
       name: "Контакти",
       link: "",
     },
+    {
+      _id: 5,
+      name: "Новини",
+      link: "",
+    },
+    {
+      _id: 6,
+      name: "Історія",
+      link: "",
+    },
   ];
 
   return (
     <section className={css.footerSection}>
       <div className={css.footerThumb}>
-        <div>
+        <div className={css.socialThumb}>
           <Image className={css.logo} width={65} height={65} src={Logo} />
           <p className={css.authorRightsText}>
             Усі данні, фото та інформація захищені авторським правом власника!
@@ -69,9 +79,9 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <div>
+        <div className={css.menuThumb}>
           <p className={css.menuTitle}>Меню</p>
-          <ul>
+          <ul className={css.menuList}>
             {menuArray.map((menuItem) => (
               <li className={css.menuItem}>{menuItem.name}</li>
             ))}
@@ -80,8 +90,9 @@ export default function Footer() {
         <div className={css.contactContainer}>
           <p className={css.menuTitle}>Наші контакти</p>
           <p className={css.addressText}>
-            м. Київ, вул. Лютеранська 27, офіс 29 Індекс: 01024З
+            м. Київ, вул. Лютеранська 27, офіс 29
           </p>
+          <p className={css.addressText}>Індекс: 01024З</p>
           <p className={css.meetingText}>Зустрічі виключно за домовленістю</p>
           <a href={`tel:+380 (66) 123-37-71`} className={css.phone}>
             +380 (66) 123-37-71

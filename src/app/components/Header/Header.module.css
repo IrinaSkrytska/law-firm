@@ -1,34 +1,148 @@
+@media (max-width: 1200px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 1199px) {
+  .mobileLogo {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.mobileMenu {
+  padding-top: 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  z-index: 120;
+  background-color: #fff;
+}
+
+.mobileMenuList {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.mobileMenuItem {
+  color: #000;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+@media (max-width: 1199px) {
+  .itemsList {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .itemsList {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  .mobileMenuIcon {
+    display: none;
+  }
+}
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 120px;
 }
-.itemsList {
-  display: flex;
-  justify-content: space-between;
+@media (max-width: 1200px) {
+  .item {
+    color: #000;
+    font-family: "Mulish";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
 }
-.item {
-  color: #fff;
-  font-family: "Mulish";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+@media (min-width: 1200px) {
+  .item {
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .item:not(:last-child) {
+    margin-right: 40px;
+  }
 }
-.item:not(:last-child) {
-  margin-right: 40px;
+.visible {
+  display: block;
 }
-.phoneText {
-  font-family: "Mulish";
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+@media (max-width: 1200px) {
+  .phoneText {
+    font-family: "Mulish";
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+@media (min-width: 1200px) {
+  .phoneText {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .desktopPhoneText {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .desktopPhoneText {
+    font-family: "Mulish";
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 }
 .phoneIcon {
   margin-right: 12px;
+}
+.cross {
+  position: fixed;
+  top: 4%;
+  left: 96%;
+  transform: translate(-96%, -4%);
+  display: block;
+  z-index: 9999;
 }

@@ -33,14 +33,14 @@ export default function Experience() {
           alt="наш досвід"
           src={ExperienceImage}
         />
-        <div>
+        <div className={css.experienceDescriptionThumb}>
           <p className={css.experienceTitle}>Наш досвід - Ваш захист!</p>
           <p className={css.experienceDescription}>
             Ми надаємо надійний правовий захист і професійний супровід у всіх
             юридичних питаннях. Наш досвід і глибокі знання допоможуть вам
             знайти найкраще рішення у складних ситуаціях.
           </p>
-          <ul>
+          <ul className={css.casesList}>
             {casesArray.map((item) => (
               <li className={css.caseItem} key={item._id}>
                 <p className={css.itemTitle}>{item.name}</p>

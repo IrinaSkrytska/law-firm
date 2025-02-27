@@ -2,15 +2,42 @@
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
-.reviewsTitle {
-  color: #604b33;
-  text-align: center;
-  font-family: "Mulish";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: capitalize;
-  margin-bottom: 20px;
+@media screen and ((max-width: 479px)) {
+  .reviewsTitle {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 1199px)) {
+  .reviewsTitle {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviewsTitle {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
 }

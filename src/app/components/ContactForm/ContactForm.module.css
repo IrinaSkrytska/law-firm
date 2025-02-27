@@ -1,78 +1,198 @@
-.form {
-  display: flex;
-  width: auto;
-  /* width: 526px; */
-  padding: 40px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  flex-shrink: 0;
-  background-color: #f9f8f5;
-}
-.formRow {
-  width: 100%;
-  display: flex;
-  gap: 24px;
+@media screen and ((max-width: 767px)) {
+  .form {
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+    max-width: 530px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0;
+    background-color: #f9f8f5;
+  }
 }
 
-.formGroup {
-  flex: 1;
-  /* width: 50%; */
-  display: flex;
-  flex-direction: column;
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .form {
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+    max-width: 530px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0;
+    background-color: #f9f8f5;
+  }
 }
-.label {
-  color: #000;
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 20px;
-  margin-bottom: 6px;
+
+@media screen and (min-width: 1200px) {
+  .form {
+    display: flex;
+    width: auto;
+    width: 526px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex-shrink: 0;
+    background-color: #f9f8f5;
+  }
 }
-.input {
-  outline: none;
-  border: none;
-  display: flex;
-  padding: 14px 16px;
-  align-items: center;
-  align-self: stretch;
-  color: var(--Gray-500, #adb5bd);
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
+@media screen and (max-width: 768px) {
+  .formRow {
+    width: 100%;
+  }
+
+  .formGroup {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .formRow {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+  }
+  .formGroup {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .label {
+    color: #000;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .label {
+    color: #000;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .input {
+    width: 100%;
+    outline: none;
+    border: none;
+    display: flex;
+    padding: 10px 12px;
+    align-items: center;
+    align-self: stretch;
+    color: var(--Gray-500, #adb5bd);
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .input {
+    outline: none;
+    border: none;
+    display: flex;
+    padding: 14px 16px;
+    align-items: center;
+    align-self: stretch;
+    color: var(--Gray-500, #adb5bd);
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
 }
 @media (max-width: 1200px) {
   .form-row {
     flex-direction: column;
   }
 }
-.customDropdown {
-  width: 100%;
-  max-width: 100%;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--Gray-500, #adb5bd);
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
+@media screen and (max-width: 767px) {
+  .customDropdown {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Gray-500, #adb5bd);
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 }
 
-.dropdownSelected {
-  width: 100%;
-  padding: 14px 16px;
-  background-color: white;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .customDropdown {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Gray-500, #adb5bd);
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dropdownSelected {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .dropdownSelected {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
 }
 
 .dropdownSelected::after {
@@ -102,18 +222,30 @@
   overflow-y: auto;
   z-index: 10;
 }
-
-.dropdownList li {
-  padding: 10px;
-  cursor: pointer;
-  color: var(--Gray-500, #adb5bd);
-  font-family: "Inter";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
+@media screen and (max-width: 767px) {
+  .dropdownList li {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--Gray-500, #adb5bd);
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
 }
-
+@media screen and (min-width: 768px) {
+  .dropdownList li {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--Gray-500, #adb5bd);
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
 .textarea {
   width: 100%;
   height: 200px;
@@ -135,21 +267,44 @@
 .submitButton:hover {
   background-color: #e66a00;
 }
-.submitBtn {
-  border: none;
-  display: flex;
-  height: 50px;
-  padding: 15px 32px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-  color: #fff;
-  text-align: center;
-  font-family: "Mulish";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  background: #bd9a4a;
+
+@media screen and (max-width: 767px) {
+  .submitBtn {
+    border: none;
+    display: flex;
+    height: 50px;
+    padding: 15px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #bd9a4a;
+  }
+}
+@media screen and (min-width: 768px) {
+  .submitBtn {
+    border: none;
+    display: flex;
+    height: 50px;
+    padding: 15px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: #bd9a4a;
+  }
 }

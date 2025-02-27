@@ -1,16 +1,41 @@
-.embla__button__left {
-  position: absolute;
-  bottom: 50%;
-  left: -3%;
-  transform: translate(3%, -50%);
-  background-color: transparent;
-  border: none;
+@media screen and (max-width: 479px) {
+  .embla__button__left {
+    position: absolute;
+    bottom: 55%;
+    left: -4%;
+    transform: translate(4%, -55%);
+    background-color: transparent;
+    border: none;
+  }
 }
-.embla__button__right {
-  position: absolute;
-  bottom: 50%;
-  right: -3%;
-  transform: translate(3%, -50%);
-  background-color: transparent;
-  border: none;
+
+@media screen and (min-width: 480px) {
+  .embla__button__left {
+    position: absolute;
+    bottom: 50%;
+    left: -3%;
+    transform: translate(3%, -50%);
+    background-color: transparent;
+    border: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .embla__button__right {
+    position: absolute;
+    bottom: 55%;
+    right: -4%;
+    transform: translate(4%, -55%);
+    background-color: transparent;
+    border: none;
+  }
+}
+@media screen and (min-width: 480px) {
+  .embla__button__right {
+    position: absolute;
+    bottom: 50%;
+    right: -3%;
+    transform: translate(3%, -50%);
+    background-color: transparent;
+    border: none;
+  }
 }
