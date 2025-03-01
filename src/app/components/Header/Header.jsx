@@ -8,6 +8,7 @@ import LogoBlack from "../../images/LogoBlack.png";
 import Phone from "@/app/images/icons/Phone";
 import MobileMenu from "@/app/images/icons/MobileMenu";
 import Cross from "@/app/images/icons/Cross";
+import Link from "next/link";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,9 +17,10 @@ export default function Header() {
     { _id: 1, name: "Головна", link: "/" },
     { _id: 2, name: "Про нас", link: "/about-us" },
     { _id: 3, name: "Послуги", link: "/services" },
-    { _id: 4, name: "Послуги для ветеранів", link: "/services-for-veterans" },
-    { _id: 5, name: "Новини", link: "/news" },
-    { _id: 6, name: "Контакти", link: "/contacts" },
+    { _id: 4, name: "Послуги для ветеранів", link: "/veteran-services" },
+    { _id: 5, name: "Команда", link: "/team" },
+    { _id: 6, name: "Новини", link: "/news" },
+    { _id: 7, name: "Контакти", link: "/contacts" },
   ];
 
   return (
@@ -29,12 +31,14 @@ export default function Header() {
         <ul className={css.itemsList}>
           {pagesArray.map((item) => (
             <li className={css.item} key={item._id}>
-              {item.name}
+              <Link onClick={() => setIsMobileMenuOpen(false)} href={item.link}>
+                {" "}
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
 
-        {/* <button className={css.mobileMenuButton} aria-label="Toggle menu"> */}
         {isMobileMenuOpen ? (
           <Cross
             className={css.cross}
@@ -53,8 +57,12 @@ export default function Header() {
             <Image className={css.mobileLogo} src={LogoBlack} alt="Logo" />
             <ul className={css.mobileMenuList}>
               {pagesArray.map((item) => (
-                <li className={css.item} key={item._id}>
-                  {item.name}
+                <li
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={css.item}
+                  key={item._id}
+                >
+                  <Link href={item.link}> {item.name}</Link>
                 </li>
               ))}
             </ul>

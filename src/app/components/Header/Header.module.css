@@ -12,7 +12,7 @@
 }
 @media (max-width: 1199px) {
   .mobileLogo {
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 40px;
     width: 80px;
     height: 80px;
@@ -71,10 +71,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 120px;
+  /* margin-bottom: 120px; */
 }
 @media (max-width: 1200px) {
   .item {
+    cursor: pointer;
     color: #000;
     font-family: "Mulish";
     font-size: 16px;
@@ -86,6 +87,7 @@
 }
 @media (min-width: 1200px) {
   .item {
+    cursor: pointer;
     color: #fff;
     font-family: "Mulish";
     font-size: 16px;

@@ -1,0 +1,38 @@
+.teamSection {
+  background-image: url(../../images/TeamHeader.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+}
+
+@media screen and ((max-width: 767px)) {
+  .teamTitle {
+    margin-top: 50px;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .teamTitle {
+    margin-top: 50px;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
+.teamList {
+  display: flex;
+  justify-content: center;
+}

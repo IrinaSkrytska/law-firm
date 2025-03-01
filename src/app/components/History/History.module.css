@@ -1,0 +1,124 @@
+.aboutSection {
+  background-color: #faf9f4;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media screen and ((max-width: 479px)) {
+  .aboutTitle {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and ((min-width: 480px) and (max-width:767px)) {
+  .aboutTitle {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and ((min-width: 768px) and (max-width:1199px)) {
+  .aboutTitle {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutTitle {
+    color: #604b33;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+}
+@media screen and ((max-width: 767px)) {
+  .aboutSubtitle {
+    text-align: center;
+    color: #000;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width:1199px)) {
+  .aboutSubtitle {
+    text-align: center;
+    color: #000;
+    font-family: "Inter";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutSubtitle {
+    text-align: center;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 40px;
+  }
+}
+.itemsList {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .item {
+    text-align: center;
+    color: #000;
+    font-family: "Inter";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media screen and (min-width: 768px) {
+  .item {
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.item:not(:last-child) {
+  margin-bottom: 40px;
+}

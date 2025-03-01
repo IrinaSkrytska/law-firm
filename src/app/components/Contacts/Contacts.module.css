@@ -1,0 +1,433 @@
+.contactsSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    lightgray 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../images/ContactsHero.png);
+}
+@media screen and (min-width: 1200px) {
+  .contactsThumb {
+    width: 50%;
+    margin-right: 30px;
+  }
+}
+
+@media screen and ((max-width: 767px)) {
+  .connectionThumb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .connectionThumb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}
+@media screen and ((min-width: 1200px)) {
+  .connectionThumb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 16px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .connectionThumb > div {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(50% - 8px);
+    align-items: center;
+  }
+}
+@media screen and ((min-width: 1200px)) {
+  .connectionThumb > div {
+    flex: 1;
+    min-width: 250px;
+  }
+}
+@media screen and ((max-width: 767px)) {
+  .itemsThumb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+    padding: 16px;
+  }
+  .addressThumb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    padding: 16px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .contactsTitle {
+    text-align: center;
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .contactsTitle {
+    text-align: center;
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .contactsTitle {
+    text-align: center;
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contactsTitle {
+    color: #fff;
+    font-family: "Mulish";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactsList {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contactsList {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .contactsText {
+    text-align: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0 20px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .contactsText {
+    text-align: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contactsText {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    margin-bottom: 40px;
+  }
+}
+@media screen and ((max-width: 767px)) {
+  .phoneIcon {
+    margin-right: 14px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and ((min-width: 768px)) {
+  .phoneIcon {
+    margin-right: 20px;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .contactsDescription {
+    text-align: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0 20px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .contactsDescription {
+    text-align: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width:1199px)) {
+  .contactsDescription {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}
+@media screen and ((min-width: 1200px)) {
+  .contactsDescription {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .contactName {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .contactName {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .contactName {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 1200px)) {
+  .contactName {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .phonesList {
+    /* margin-left: 50px; */
+    margin-bottom: 40px;
+  }
+}
+@media screen and ((min-width: 1200px)) {
+  .phonesList {
+    margin-left: 50px;
+  }
+}
+@media screen and ((max-width: 1199px)) {
+  .phoneItem {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+  }
+}
+@media screen and ((max-width: 767px)) {
+  .phoneItem {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+  }
+}
+
+@media screen and ((min-width: 768px)) {
+  .phoneItem {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .addressItem {
+    text-align: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+    max-width: 200px;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 1200px)) {
+  .addressItem {
+    text-align: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+    max-width: 200px;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1200px)) {
+  .addressItem {
+    text-align: center;
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+    /* margin-left: 50px; */
+    max-width: 250px;
+  }
+}
+
+@media screen and ((min-width: 1200px)) {
+  .addressItem {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+    margin-left: 50px;
+  }
+}
+@media screen and ((max-width: 767px)) {
+  .emailItem {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+  }
+}
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .emailItem {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+    margin-bottom: 60px;
+    /* max-width: 250px;
+    margin-bottom: 80px; */
+  }
+}
+
+@media screen and ((min-width: 1200px)) {
+  .emailItem {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 12px;
+    text-wrap: wrap;
+    margin-left: 50px;
+  }
+}
