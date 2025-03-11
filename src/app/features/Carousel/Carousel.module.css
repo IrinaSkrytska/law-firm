@@ -36,7 +36,7 @@
     transform: translate3d(0, 0, 0);
     flex: 0 0 100%;
     min-width: 100%;
-    padding: 0 20px;
+    padding: 0 60px;
   }
 }
 
@@ -364,10 +364,21 @@
     line-height: normal;
   }
 }
-@media screen and ((max-width: 767px)) {
+@media screen and ((max-width: 479px)) {
   .reviewImage {
     display: block;
     width: 100%;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 480px) and  (max-width: 767px)) {
+  .reviewImage {
+    display: block;
+    width: 100%;
+    max-width: 80%;
     height: auto;
     margin: 0 auto;
     margin-bottom: 20px;

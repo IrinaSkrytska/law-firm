@@ -1,27 +1,35 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import css from "./Experience.module.css";
 import Image from "next/image";
 import ExperienceImage from "../../images/ExperienceImage.jpg";
 
 export default function Experience() {
-  const casesArray = [
-    {
-      _id: 1,
-      name: "Успішні кейси",
-      percentage: "98",
-    },
-    {
-      _id: 2,
-      name: "Фінансові справи",
-      percentage: "96",
-    },
-    {
-      _id: 3,
-      name: "Військове право",
-      percentage: "95",
-    },
-  ];
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+  const [cases, setCases] = useState([]);
+
+  useEffect(() => {
+    const fetchCases = async () => {
+      try {
+        const response = await fetch(`${BASE_URL}/cases`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch cases");
+        }
+        const data = await response.json();
+
+        if (!Array.isArray(data.cases)) {
+          throw new Error("Invalid API response format");
+        }
+
+        setCases(data.cases);
+      } catch (error) {
+        console.error("Error fetching cases:", error);
+      }
+    };
+
+    fetchCases();
+  }, []);
 
   return (
     <section className={css.experienceSection}>
@@ -41,8 +49,8 @@ export default function Experience() {
             знайти найкраще рішення у складних ситуаціях.
           </p>
           <ul className={css.casesList}>
-            {casesArray.map((item) => (
-              <li className={css.caseItem} key={item._id}>
+            {cases.map((item) => (
+              <li className={css.caseItem} key={item._id || item.name}>
                 <p className={css.itemTitle}>{item.name}</p>
                 <div className={css.itemProgressThumb}>
                   <div className={css.itemProgressContainer}>

@@ -1,40 +1,31 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import css from "./Packages.module.css";
-import Logo from "../../images/Logo.png";
-import BusinessLawService from "../../images/BusinessLawService.svg";
-import BankLawService from "../../images/BankLawService.svg";
-import RealEstateLawService from "../../images/RealEstateLawService.svg";
 import DoneArrow from "../../images/DoneArrow.svg";
 
 export default function Packages() {
-  const packagesArray = [
-    {
-      _id: 1,
-      name: "Бізнес-право",
-      price: "$500/місяць",
-      servicesArray: ["20 годин у суді", "25 годин зустрічей", "100% успіх"],
-      icon: BusinessLawService,
-      alt: "бізнес-право",
-    },
-    {
-      _id: 2,
-      name: "Банківське право",
-      price: "$450/місяць",
-      servicesArray: ["20 годин у суді", "25 годин зустрічей", "100% успіх"],
-      icon: BankLawService,
-      alt: "банківське право",
-    },
-    {
-      _id: 3,
-      name: "Нерухомість",
-      price: "$700/місяць",
-      servicesArray: ["20 годин у суді", "25 годин зустрічей", "100% успіх"],
-      icon: RealEstateLawService,
-      alt: "нерухомість",
-    },
-  ];
+  const [packages, setPackages] = useState([]);
+  const [error, setError] = useState(null);
+
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
+  useEffect(() => {
+    async function fetchPackages() {
+      try {
+        const response = await fetch(`${BASE_URL}/packages`);
+        if (!response.ok) throw new Error("Failed to fetch packages");
+
+        const data = await response.json();
+        setPackages(data.packages);
+      } catch (error) {
+        setError(error.message);
+      }
+    }
+
+    fetchPackages();
+  }, []);
 
   return (
     <section className={css.packagesSection}>
@@ -44,17 +35,23 @@ export default function Packages() {
         обраного тарифу.
       </p>
       <ul className={css.packagesList}>
-        {packagesArray.map((item) => (
-          <li className={css.packageItem}>
-            <Image className={css.packageIcon} src={item.icon} />
+        {packages.map((item) => (
+          <li className={css.packageItem} key={item._id}>
+            <Image
+              className={css.packageIcon}
+              src={item.icon}
+              alt={item.name}
+              width={64}
+              height={64}
+            />
             <p className={css.packageName}>{item.name}</p>
-            <p className={css.packagePrice}>{item.price}</p>
+            <p className={css.packagePrice}>{item.price} грн</p>
             <ul>
-              {item.servicesArray.map((service) => (
-                <li className={css.serviceItem}>
+              {item.servicesArray.map((service, index) => (
+                <li className={css.serviceItem} key={index}>
                   <Image
                     className={css.serviceIcon}
-                    alt={service.alt}
+                    alt="Done"
                     width={24}
                     height={24}
                     src={DoneArrow}

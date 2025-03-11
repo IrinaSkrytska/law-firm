@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import css from "./Company.module.css";
 import AboutCompany from "../../images/AboutCompany.png";
@@ -11,56 +12,25 @@ import CivilLaw from "../../images/CivilLaw.svg";
 import TaxLaw from "../../images/TaxLaw.svg";
 
 export default function Company() {
-  const servicesArray = [
-    {
-      _id: 1,
-      name: "Банківське та фінансове право",
-      description:
-        "Супровід банківських операцій, кредитних угод та фінансових транзакцій.",
-      image: BankLaw,
-      alt: "Банківське та фінансове право",
-    },
-    {
-      _id: 2,
-      name: "Сімейне право",
-      description:
-        "Врегулювання питань розлучення, аліментів, опіки над дітьми та поділу майна.",
-      image: FamilyLaw,
-      alt: "Сімейне право",
-    },
-    {
-      _id: 3,
-      name: "Корпоративне право",
-      description:
-        "Консультації з питань реєстрації бізнесу, корпоративного управління.",
-      image: CompanyLaw,
-      alt: "Корпоративне право",
-    },
-    {
-      _id: 4,
-      name: "Нерухомість та будівництво",
-      description:
-        "Консультації з питань реєстрації бізнесу, корпоративного управління.",
-      image: RealEstateLaw,
-      alt: "Нерухомість та будівництво",
-    },
-    {
-      _id: 5,
-      name: "Цивільне право",
-      description:
-        "Допомога у майнових спорах, договірних зобов'язаннях та захисті прав власності.",
-      image: CivilLaw,
-      alt: "Цивільне право",
-    },
-    {
-      _id: 6,
-      name: "Податкове право",
-      description:
-        "Консультації з податкових питань, оптимізація податкового навантаження.",
-      image: TaxLaw,
-      alt: "Податкове право",
-    },
-  ];
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const response = await fetch(`${BASE_URL}/services`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch services");
+        }
+        const data = await response.json();
+        setServices(data.services);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+      }
+    };
+
+    fetchServices();
+  }, []);
 
   return (
     <section className={css.companySection}>
@@ -82,12 +52,14 @@ export default function Company() {
         <Image className={css.aboutImage} src={AboutCompany} />
       </div>
       <ul className={css.companyServicesList}>
-        {servicesArray.map((service) => (
-          <li className={css.serviceItem}>
+        {services.map((service) => (
+          <li key={service.id} className={css.serviceItem}>
             <Image
               className={css.itemImage}
-              alt={service.alt}
+              alt={service.name}
               src={service.image}
+              width={80}
+              height={80}
             />
             <p className={css.serviceItemName}>{service.name}</p>
             <p className={css.serviceItemDescription}>{service.description}</p>
