@@ -270,6 +270,7 @@
 
 @media screen and (max-width: 767px) {
   .submitBtn {
+    cursor: pointer;
     border: none;
     display: flex;
     height: 50px;
@@ -290,6 +291,7 @@
 }
 @media screen and (min-width: 768px) {
   .submitBtn {
+    cursor: pointer;
     border: none;
     display: flex;
     height: 50px;
@@ -306,5 +308,83 @@
     font-weight: 700;
     line-height: normal;
     background: #bd9a4a;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+@media screen and ((max-width: 479px)) {
+  .modalContent {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 260px;
+  }
+}
+@media screen and ((min-width: 480px)) {
+  .modalContent {
+    position: relative;
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 5px;
+    text-align: center;
+    width: 400px;
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.closeBtn {
+  padding: 10px 20px;
+  background: #bd9a4a;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Mulish";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and ((max-width: 479px)) {
+  .statusMessage {
+    text-align: center;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 480px)) {
+  .statusMessage {
+    text-align: center;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }

@@ -235,6 +235,7 @@
 }
 @media screen and (max-width: 767px) {
   .itemBtn {
+    cursor: pointer;
     display: flex;
     height: 50px;
     padding: 10px 32px;
@@ -254,6 +255,7 @@
 
 @media screen and (min-width: 768px) {
   .itemBtn {
+    cursor: pointer;
     display: flex;
     height: 50px;
     padding: 15px 32px;
@@ -268,5 +270,136 @@
     line-height: normal;
     background: #604b33;
     border: none;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+@media screen and ((max-width: 479px)) {
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+    width: 260px;
+    height: 320px;
+  }
+}
+@media screen and ((min-width: 480px)) {
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    height: 280px;
+    position: relative;
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 5px;
+    text-align: center;
+    width: 400px;
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.submitBtn {
+  padding: 10px 30px;
+  background: #604b33;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: "Mulish";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and ((max-width: 479px)) {
+  .statusMessage {
+    text-align: center;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((min-width: 480px)) {
+  .statusMessage {
+    text-align: center;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and ((max-width: 479px)) {
+  .input {
+    max-width: 100%;
+    outline: none;
+    border: 2px solid var(--Gray-300, #dee2e6);
+    border-radius: 12px;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    align-items: center;
+    align-self: stretch;
+    color: var(--Gray-500, #adb5bd);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and ((min-width: 480px)) {
+  .input {
+    max-width: 100%;
+    outline: none;
+    border: 2px solid var(--Gray-300, #dee2e6);
+    border-radius: 12px;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    align-items: center;
+    align-self: stretch;
+    color: var(--Gray-500, #adb5bd);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 30px;
   }
 }

@@ -8,6 +8,11 @@ import DoneArrow from "../../images/DoneArrow.svg";
 export default function Packages() {
   const [packages, setPackages] = useState([]);
   const [error, setError] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState("");
+  const [selectedPackage, setSelectedPackage] = useState(null);
+  const [userPhoneNumber, setUserPhoneNumber] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -26,6 +31,44 @@ export default function Packages() {
 
     fetchPackages();
   }, []);
+
+  const handleOrderClick = (item) => {
+    setSelectedPackage(item);
+    setModalContent("Введіть ваш номер телефону для підтвердження замовлення:");
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmAndSend = async () => {
+    if (!userPhoneNumber) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(`${BASE_URL}/send-package`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          phone: userPhoneNumber,
+          package: selectedPackage.name,
+          price: selectedPackage.price,
+        }),
+      });
+
+      if (response.ok) {
+        setModalContent(
+          "Дякуємо, Ваш запит надіслано! Наш представник зв'яжеться з вами найближчим часом."
+        );
+        setUserPhoneNumber("");
+      } else {
+        setModalContent("Помилка при відправленні. Спробуйте ще раз.");
+      }
+    } catch (error) {
+      console.error("Error sending request:", error);
+      setModalContent("Помилка з'єднання. Спробуйте ще раз.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className={css.packagesSection}>
@@ -60,10 +103,51 @@ export default function Packages() {
                 </li>
               ))}
             </ul>
-            <button className={css.itemBtn}>Замовити</button>
+            <button
+              className={css.itemBtn}
+              onClick={() => handleOrderClick(item)}
+            >
+              Замовити
+            </button>
           </li>
         ))}
       </ul>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className={css.modal}>
+          <div className={css.modalContent}>
+            <button
+              className={css.closeIcon}
+              onClick={() => setIsModalOpen(false)}
+            >
+              ×
+            </button>
+            <p className={css.statusMessage}>{modalContent}</p>
+
+            {!isSubmitting && modalContent.includes("Введіть ваш номер") && (
+              <>
+                <input
+                  type="tel"
+                  className={css.input}
+                  placeholder="+380XXXXXXXXX"
+                  value={userPhoneNumber}
+                  onChange={(e) => setUserPhoneNumber(e.target.value)}
+                  required
+                />
+                <button
+                  className={css.submitBtn}
+                  onClick={handleConfirmAndSend}
+                >
+                  Надіслати
+                </button>
+              </>
+            )}
+
+            {isSubmitting && <p>Надсилання...</p>}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
