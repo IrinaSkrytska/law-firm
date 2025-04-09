@@ -42,13 +42,9 @@ const Carousel = (props) => {
                   <div className={css.line}></div>
                 </div>
                 <div>
-                  <p className={css.reviewText}>
-                    "Професійний підхід та високий рівень обслуговування!
-                    Завдяки команді юристів ми швидко вирішили складне юридичне
-                    питання. Вдячні за підтримку та чіткість у роботі."
-                  </p>
-                  <p className={css.reviewName}>Харченко Борис</p>
-                  <p className={css.reviewRole}>Власник кав’ярні Coffee Room</p>
+                  <p className={css.reviewText}>{slide.text}</p>
+                  <p className={css.reviewName}>{slide.name}</p>
+                  <p className={css.reviewRole}>{slide.role}</p>
                 </div>
               </div>
               <Image

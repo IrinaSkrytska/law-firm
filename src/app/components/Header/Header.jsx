@@ -19,7 +19,7 @@ export default function Header() {
     { _id: 3, name: "Послуги", link: "/services" },
     { _id: 4, name: "Послуги для ветеранів", link: "/veteran-services" },
     { _id: 5, name: "Команда", link: "/team" },
-    { _id: 6, name: "Новини", link: "/news" },
+
     { _id: 7, name: "Контакти", link: "/contacts" },
   ];
 

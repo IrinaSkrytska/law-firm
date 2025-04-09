@@ -88,7 +88,7 @@ export default function Packages() {
               height={64}
             />
             <p className={css.packageName}>{item.name}</p>
-            <p className={css.packagePrice}>{item.price} грн</p>
+            <p className={css.packagePrice}>{item.price}</p>
             <ul>
               {item.servicesArray.map((service, index) => (
                 <li className={css.serviceItem} key={index}>

@@ -63,9 +63,9 @@
 @media screen and (min-width: 1200px) {
   .companyDescriptionThumb {
     position: absolute;
-    bottom: 42%;
+    bottom: 45%;
     left: 50%;
-    transform: translate(-50%, -42%);
+    transform: translate(-50%, -45%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +73,7 @@
     padding: 86px;
     height: 506px;
     width: 90%;
-    /* max-width: 1300px; */
+    max-width: 1300px;
     z-index: 100;
   }
 }
@@ -269,7 +269,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 1300px;
+    /* max-width: 1300px; */
     margin-bottom: 60px;
   }
 }
@@ -405,5 +405,31 @@
     font-weight: 400;
     line-height: normal;
     max-width: 240px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .veteransText {
+    text-align: center;
+    color: #000;
+    font-family: "Mulish";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .veteransText {
+    text-align: center;
+    color: #000;
+    font-family: "Mulish";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }

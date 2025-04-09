@@ -10,8 +10,6 @@ export default function ContactForm() {
     name: "",
     phone: "",
     email: "",
-    service: "",
-    subject: "",
     message: "",
   });
 
@@ -60,8 +58,6 @@ export default function ContactForm() {
           name: "",
           phone: "",
           email: "",
-          service: "",
-          subject: "",
           message: "",
         });
         setSelectedService("");
@@ -130,50 +126,6 @@ export default function ContactForm() {
               required
             />
           </div>
-          <div className={css.formGroup}>
-            <label className={css.label}>Послуга</label>
-            <div
-              className={css.customDropdown}
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            >
-              <div className={css.dropdownSelected}>
-                {selectedService ? selectedService : "Оберіть послугу"}
-              </div>
-              {isDropdownOpen && (
-                <ul className={css.dropdownList}>
-                  {services.map((service) => (
-                    <li
-                      key={service._id}
-                      onClick={() => handleSelect(service.label)}
-                    >
-                      {service.label}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-            <input
-              type="hidden"
-              name="service"
-              value={selectedService}
-              required
-            />
-          </div>
-        </div>
-
-        <div className={css.formGroup}>
-          <label className={css.label} htmlFor="subject">
-            Тема
-          </label>
-          <input
-            className={css.input}
-            type="text"
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-          />
         </div>
 
         <label className={css.label} htmlFor="message">

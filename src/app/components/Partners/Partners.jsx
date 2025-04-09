@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import css from "./Partners.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Partners() {
   const [partners, setPartners] = useState([]);
@@ -32,14 +33,16 @@ export default function Partners() {
       <ul className={css.partnersList}>
         {partners.map((partner) => (
           <li className={css.partnerItem} key={partner._id}>
-            <Image
-              className={css.partnerImage}
-              height={280}
-              width={320}
-              src={partner.image}
-              alt={partner.name}
-            />
-            <p className={css.partnerName}>{partner.name}</p>
+            <Link target="_blank" href={partner.link}>
+              <Image
+                className={css.partnerImage}
+                height={280}
+                width={320}
+                src={partner.image}
+                alt={partner.name}
+              />
+              <p className={css.partnerName}>{partner.name}</p>
+            </Link>
           </li>
         ))}
       </ul>

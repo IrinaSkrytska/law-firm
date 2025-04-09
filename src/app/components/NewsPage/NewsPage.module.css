@@ -100,6 +100,7 @@
   .itemsList {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 24px;
   }
@@ -118,7 +119,7 @@
 
 @media screen and (min-width: 1200px) {
   .item {
-    width: calc(33.333% - 48px);
+    width: 0 0 calc((100% - 48px) / 3);
   }
 }
 @media screen and ((max-width: 767px)) {

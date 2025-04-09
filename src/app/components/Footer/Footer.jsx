@@ -7,26 +7,27 @@ import Facebook from "../../images/Facebook.svg";
 import Instagram from "../../images/Instagram.svg";
 import Telegram from "../../images/Telegram.svg";
 import SpitzumLogo from "../../images/SpitzumLogo.png";
+import Link from "next/link";
 
 export default function Footer() {
   const socialMediaArray = [
-    {
-      _id: 1,
-      name: "Facebook",
-      icon: Facebook,
-      link: "",
-    },
+    // {
+    //   _id: 1,
+    //   name: "Facebook",
+    //   icon: Facebook,
+    //   link: "",
+    // },
     {
       _id: 2,
       name: "Instagram",
       icon: Instagram,
-      link: "",
+      link: "https://www.instagram.com/ukraine.pravo?igsh=MWcweDlreTBwNmM2dA==",
     },
     {
       _id: 3,
       name: "Telegram",
       icon: Telegram,
-      link: "",
+      link: "https://t.me/advopravo",
     },
   ];
 
@@ -100,11 +101,12 @@ export default function Footer() {
           <a href={`tel:+380 (95) 836-52-33`} className={css.phone}>
             +380 (95) 836-52-33
           </a>
-          <a
-            href={`mailto:national.association.hrdlu@gmail.com`}
-            className={css.email}
-          >
-            national.association.hrdlu@gmail.com
+          <a href={`mailto:ukraine.pravo@ukr.net`} className={css.email}>
+            ukraine.pravo@ukr.net - для Громадян
+          </a>
+          <a href={`mailto:dilovaposhta2@gmail.com`} className={css.email}>
+            dilovaposhta2@gmail.com - для Урядової та дипломатичної
+            кореспонденції
           </a>
         </div>
         <div className={css.contactUsThumb}>
@@ -114,7 +116,7 @@ export default function Footer() {
         </div>
       </div>
       <p className={css.copyright}>
-        ©Copyright 2025. Powered by Spitzum{" "}
+        ©Copyright 2025. Powered by Spitzum
         <Image
           className={css.SpitzumLogo}
           width={30}

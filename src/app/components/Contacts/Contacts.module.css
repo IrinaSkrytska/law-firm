@@ -36,6 +36,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     margin: 0 auto;
     max-width: 80%;
   }
@@ -45,6 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     margin: 0 auto;
     gap: 16px;
   }
@@ -57,12 +59,11 @@
     align-items: center;
   }
 }
-@media screen and ((min-width: 1200px)) {
+/* @media screen and ((min-width: 1200px)) {
   .connectionThumb > div {
-    flex: 1;
-    min-width: 250px;
+    width: 250px;
   }
-}
+} */
 @media screen and ((max-width: 767px)) {
   .itemsThumb {
     display: flex;
@@ -73,17 +74,30 @@
     width: 100%;
     padding: 16px;
   }
-  .addressThumb {
+}
+@media screen and ((min-width: 768px)) {
+  .itemsThumb {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100%;
-    padding: 16px;
-    width: 100%;
     align-items: center;
-    margin-bottom: 60px;
+    max-width: 50%;
+
+    box-sizing: border-box;
+    /* padding: 16px; */
   }
 }
+.addressThumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 16px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
 @media screen and ((max-width: 479px)) {
   .contactsTitle {
     text-align: center;

@@ -22,9 +22,9 @@ export default function Contacts() {
         "Дякуємо за розуміння!",
       ],
       phones: ["+380 (66) 123-37-71", "+380 (95) 836-52-33"],
-      email: "national.association.hrdlu@gmail.com",
+      email: "ukraine.pravo@ukr.net",
       address: "м. Київ, вул. Лютеранська 27, офіс 29. Індекс: 01024",
-      schedule: "Пн-Пт: 08:00 - 21:00",
+      schedule: "Пн-Сб: 07:00 - 21:00",
     },
   ];
 
@@ -115,12 +115,17 @@ export default function Contacts() {
               />
               Час роботи
             </p>
-
             {contactsArray.map((contact) => (
               <p key={`address-${contact._id}`} className={css.emailItem}>
                 {contact.schedule}
               </p>
             ))}
+            <p className={css.emailItem}>
+              7.00-12.00 Зустрічі по вул.Банкова (Урядовий квартал)
+            </p>
+            <p className={css.emailItem}>
+              Дзвінки, повідомлення - цілодобово, кожного дня, без вихідних{" "}
+            </p>
           </div>
         </div>
       </div>

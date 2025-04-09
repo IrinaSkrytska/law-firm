@@ -101,7 +101,11 @@
     display: flex;
   }
 }
+.socialMediaItem {
+  cursor: pointer;
+}
 .socialMediaItem:not(:last-child) {
+  cursor: pointer;
   margin-right: 12px;
 }
 @media screen and ((max-width: 767px)) {
@@ -272,6 +276,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
+    margin-bottom: 5px;
   }
 }
 @media screen and ((min-width: 480px)) {
@@ -282,6 +287,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
+    margin-bottom: 5px;
   }
 }
 @media screen and ((min-width: 768px)) {
