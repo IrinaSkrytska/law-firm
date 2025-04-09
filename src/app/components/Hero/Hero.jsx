@@ -13,8 +13,8 @@ export default function Hero() {
       <Header />
       <Image
         className={css.coatOfArmsIcon}
-        width={66}
-        height={100}
+        width={75}
+        height={86}
         src={CoatOfArms}
       />
       <div className={css.heroThumb}>
