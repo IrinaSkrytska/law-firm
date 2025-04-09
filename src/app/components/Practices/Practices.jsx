@@ -47,6 +47,9 @@ export default function Practices() {
           </li>
         ))}
       </ul>
+      <p className={css.veteransText}>
+        Для військових послуги надаються безкоштовно!
+      </p>
     </section>
   );
 }
