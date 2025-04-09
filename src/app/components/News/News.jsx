@@ -38,8 +38,8 @@ export default function News() {
 
   return (
     <section className={css.newsSection}>
-      <p className={css.newsTitle}>Новини</p>
-      <p className={css.newsSubtitle}>
+      <p className={css.newsTitle}>Президент</p>
+      {/* <p className={css.newsSubtitle}>
         Слідкуйте за актуальними новинами юридичного світу
       </p>
       <ul className={css.itemsList}>
@@ -62,7 +62,7 @@ export default function News() {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </section>
   );
 }
