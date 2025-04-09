@@ -8,8 +8,8 @@
 }
 @media screen and ((max-width: 479px)) {
   .coatOfArmsIcon {
-    width: 36px;
-    height: 60px;
+    width: 46px;
+    height: 58px;
     position: absolute;
     top: 20%;
     left: 50%;
@@ -18,8 +18,8 @@
 }
 @media screen and ((min-width: 480px) and (max-width: 1200px)) {
   .coatOfArmsIcon {
-    width: 36px;
-    height: 60px;
+    width: 65px;
+    height: 76px;
     position: absolute;
     top: 20%;
     left: 50%;

@@ -24,9 +24,9 @@
 @media screen and ((min-width: 480px) and (max-width: 767px)) {
   .companyDescriptionThumb {
     position: absolute;
-    bottom: 50%;
+    bottom: 53%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -53%);
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -45,9 +45,9 @@
 @media screen and ((min-width: 768px) and (max-width: 1199px)) {
   .companyDescriptionThumb {
     position: absolute;
-    bottom: 42%;
+    bottom: 50%;
     left: 50%;
-    transform: translate(-50%, -42%);
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: space-between;
     align-items: center;
