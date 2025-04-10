@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import css from "./Company.module.css";
+import Modal from "../../features/Modal/Modal";
 import AboutCompany from "../../images/AboutCompany.png";
 import BankLaw from "../../images/BankLaw.svg";
 import FamilyLaw from "../../images/FamilyLaw.svg";
@@ -10,10 +11,47 @@ import CompanyLaw from "../../images/CompanyLaw.svg";
 import RealEstateLaw from "../../images/RealEstateLaw.svg";
 import CivilLaw from "../../images/CivilLaw.svg";
 import TaxLaw from "../../images/TaxLaw.svg";
+import Link from "next/link";
 
 export default function Company() {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const [services, setServices] = useState([]);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(
+    "Введіть ваш номер телефону для зворотного дзвінка:"
+  );
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (phone) => {
+    if (!phone) return;
+
+    setIsLoading(true);
+    setModalContent("Надсилаємо...");
+    setIsSuccess(false);
+
+    try {
+      const response = await fetch(`${BASE_URL}/send-callback`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone }),
+      });
+
+      if (response.ok) {
+        setModalContent("Дякуємо, Ваш запит на зворотний дзвінок надіслано!");
+        setIsSuccess(true);
+      } else {
+        setModalContent("Помилка при відправленні. Спробуйте ще раз.");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.error("Error sending request:", error);
+      setModalContent("Помилка з'єднання. Спробуйте ще раз.");
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -50,7 +88,43 @@ export default function Company() {
           </p>
         </div>
         <Image className={css.aboutImage} src={AboutCompany} />
+        {/* <button
+          className={css.callBackBtn}
+          onClick={() => {
+            setIsModalOpen(true);
+            setIsSuccess(false);
+          }}
+        >
+          ШВИДКА КОНСУЛЬТАЦІЯ
+        </button>
+        <button
+          className={css.consultBtn}
+          onClick={() => {
+            setIsModalOpen(true);
+            setIsSuccess(false);
+          }}
+        >
+          ЗУСТРІЧ ЗІ СПЕЦІАЛІСТОМ
+        </button>
+        <button
+          className={css.presidentBtn}
+          onClick={() => {
+            setIsModalOpen(true);
+            setIsSuccess(false);
+          }}
+        >
+          КОНСУЛЬТАЦІЯ З ЗАСНОВНИКОМ
+        </button> */}
       </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        isLoading={isLoading}
+        onClose={() => setIsModalOpen(false)}
+        onSubmit={handleSubmit}
+        modalContent={modalContent}
+        isSuccess={isSuccess}
+      />
       <ul className={css.companyServicesList}>
         {services.map((service) => (
           <li key={service.id} className={css.serviceItem}>

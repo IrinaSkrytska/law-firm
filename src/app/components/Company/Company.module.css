@@ -433,3 +433,98 @@
     margin-bottom: 40px;
   }
 }
+@media screen and ((max-width: 479px)) {
+  .callBackBtn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 5px 4px;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+@media screen and ((min-width: 480px) and (max-width: 1199px)) {
+  .callBackBtn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 15px 32px;
+    color: #fff;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .callBackBtn {
+    position: absolute;
+    bottom: 3%;
+    transform: translate(0%, -3%);
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 15px 32px;
+    color: #000;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.companyThumb {
+  display: flex;
+}
+.consultBtn {
+  position: absolute;
+  bottom: 3%;
+  left: 44%;
+  transform: translate(-44%, -3%);
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 2px solid #bd9a4a;
+  padding: 15px 32px;
+  color: #000;
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.presidentBtn {
+  position: absolute;
+  bottom: 3%;
+  left: 70%;
+  transform: translate(-70%, -3%);
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 2px solid #bd9a4a;
+  padding: 15px 32px;
+  color: #000;
+  text-align: center;
+  font-family: "Mulish";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

@@ -15,7 +15,7 @@ export default function Header() {
 
   const pagesArray = [
     { _id: 1, name: "Головна", link: "/" },
-    { _id: 2, name: "Про нас", link: "/about-us" },
+    { _id: 2, name: "Історичний розділ", link: "/about-us" },
     { _id: 3, name: "Послуги", link: "/services" },
     { _id: 4, name: "Послуги для ветеранів", link: "/veteran-services" },
     { _id: 5, name: "Команда", link: "/team" },

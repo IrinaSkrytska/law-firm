@@ -11,6 +11,7 @@ import Consultation from "./components/Consultation/Consultation";
 import Partners from "./components/Partners/Partners";
 import Footer from "./components/Footer/Footer";
 import News from "./components/News/News";
+import Vacancies from "./components/Vacancies/Vacancies";
 
 export default function Home() {
   return (
@@ -20,9 +21,9 @@ export default function Home() {
         <Company />
         <CallBack />
         <Experience />
+        <Vacancies />
         <Reviews />
         <Consultation />
-        <News />
         <Partners />
         <Footer />
       </Container>

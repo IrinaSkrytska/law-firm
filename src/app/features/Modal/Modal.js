@@ -35,7 +35,7 @@ export default function Modal({
               className={css.submitBtn}
               onClick={() => {
                 onSubmit(phone);
-                setPhone(""); // Reset input after sending
+                setPhone("");
               }}
             >
               Надіслати
