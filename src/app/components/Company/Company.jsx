@@ -88,33 +88,35 @@ export default function Company() {
           </p>
         </div>
         <Image className={css.aboutImage} src={AboutCompany} />
-        {/* <button
-          className={css.callBackBtn}
-          onClick={() => {
-            setIsModalOpen(true);
-            setIsSuccess(false);
-          }}
-        >
-          ШВИДКА КОНСУЛЬТАЦІЯ
-        </button>
-        <button
-          className={css.consultBtn}
-          onClick={() => {
-            setIsModalOpen(true);
-            setIsSuccess(false);
-          }}
-        >
-          ЗУСТРІЧ ЗІ СПЕЦІАЛІСТОМ
-        </button>
-        <button
-          className={css.presidentBtn}
-          onClick={() => {
-            setIsModalOpen(true);
-            setIsSuccess(false);
-          }}
-        >
-          КОНСУЛЬТАЦІЯ З ЗАСНОВНИКОМ
-        </button> */}
+        <div className={css.buttonsThumb}>
+          <button
+            className={css.callBackBtn}
+            onClick={() => {
+              setIsModalOpen(true);
+              setIsSuccess(false);
+            }}
+          >
+            ШВИДКА КОНСУЛЬТАЦІЯ
+          </button>
+          <button
+            className={css.consultBtn}
+            onClick={() => {
+              setIsModalOpen(true);
+              setIsSuccess(false);
+            }}
+          >
+            ЗУСТРІЧ ЗІ СПЕЦІАЛІСТОМ
+          </button>
+          <button
+            className={css.presidentBtn}
+            onClick={() => {
+              setIsModalOpen(true);
+              setIsSuccess(false);
+            }}
+          >
+            КОНСУЛЬТАЦІЯ З ЗАСНОВНИКОМ
+          </button>
+        </div>
       </div>
 
       <Modal

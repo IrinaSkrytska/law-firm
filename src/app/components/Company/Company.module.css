@@ -1,21 +1,40 @@
-.companySection {
-  position: relative;
-  background-color: #faf9f4;
-  padding-top: 460px;
+@media screen and ((max-width: 479px)) {
+  .companySection {
+    position: relative;
+    background-color: #faf9f4;
+    padding-top: 580px;
+  }
+}
+
+@media screen and ((min-width: 480px) and (max-width: 767px)) {
+  .companySection {
+    position: relative;
+    background-color: #faf9f4;
+    padding-top: 680px;
+  }
+}
+
+@media screen and ((min-width: 768px)) {
+  .companySection {
+    position: relative;
+    background-color: #faf9f4;
+    padding-top: 480px;
+  }
 }
 @media screen and ((max-width: 479px)) {
   .companyDescriptionThumb {
     position: absolute;
-    bottom: 53%;
+    bottom: 47%;
     left: 50%;
-    transform: translate(-50%, -53%);
+    transform: translate(-50%, -47%);
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: stretch;
     background-color: #fff;
-    padding: 30px 50px;
-    min-height: 500px;
+    padding: 20px 20px;
+    min-height: 780px;
+    max-height: 780px;
     width: 90%;
     /* max-width: 1300px; */
     z-index: 100;
@@ -24,16 +43,17 @@
 @media screen and ((min-width: 480px) and (max-width: 767px)) {
   .companyDescriptionThumb {
     position: absolute;
-    bottom: 53%;
+    bottom: 44%;
     left: 50%;
-    transform: translate(-50%, -53%);
+    transform: translate(-50%, -44%);
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: stretch;
     background-color: #fff;
-    padding: 30px 50px;
-    min-height: 560px;
+    padding: 20px 20px;
+    min-height: 800px;
+    max-height: 800px;
     width: 90%;
     /* max-width: 1300px; */
     z-index: 100;
@@ -45,16 +65,16 @@
 @media screen and ((min-width: 768px) and (max-width: 1199px)) {
   .companyDescriptionThumb {
     position: absolute;
-    bottom: 50%;
+    bottom: 43%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -43%);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     background-color: #fff;
     padding: 30px 50px;
-    min-height: 530px;
-    max-height: 550px;
+    min-height: 640px;
+    max-height: 650px;
     width: 90%;
     /* max-width: 1300px; */
     z-index: 100;
@@ -63,15 +83,15 @@
 @media screen and (min-width: 1200px) {
   .companyDescriptionThumb {
     position: absolute;
-    bottom: 45%;
+    bottom: 38%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -38%);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     background-color: #fff;
     padding: 86px;
-    height: 506px;
+    height: 646px;
     width: 90%;
     max-width: 1300px;
     z-index: 100;
@@ -177,6 +197,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
+    margin-bottom: 220px;
   }
 }
 @media screen and ((min-width: 480px) and (max-width: 767px)) {
@@ -433,35 +454,57 @@
     margin-bottom: 40px;
   }
 }
-@media screen and ((max-width: 479px)) {
+@media screen and (max-width: 767px) {
+  .buttonsThumb {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -3%);
+  }
+}
+@media screen and (min-width: 768px) {
+  .buttonsThumb {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -3%);
+  }
+}
+@media screen and ((max-width: 767px)) {
   .callBackBtn {
+    width: 240px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
     background-color: transparent;
     border: 2px solid #bd9a4a;
-    padding: 5px 4px;
-    color: #fff;
+    padding: 10px 20px;
+    color: #000;
     text-align: center;
     font-family: "Mulish";
-    font-size: 12px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-bottom: 10px;
   }
 }
-@media screen and ((min-width: 480px) and (max-width: 1199px)) {
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
   .callBackBtn {
+    width: 200px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    margin-right: 20px;
     background-color: transparent;
     border: 2px solid #bd9a4a;
-    padding: 15px 32px;
-    color: #fff;
+    padding: 15px 20px;
+    color: #000;
     text-align: center;
     font-family: "Mulish";
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -469,12 +512,11 @@
 }
 @media screen and (min-width: 1200px) {
   .callBackBtn {
-    position: absolute;
-    bottom: 3%;
-    transform: translate(0%, -3%);
+    width: 300px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    margin-right: 40px;
     background-color: transparent;
     border: 2px solid #bd9a4a;
     padding: 15px 32px;
@@ -490,41 +532,110 @@
 .companyThumb {
   display: flex;
 }
-.consultBtn {
-  position: absolute;
-  bottom: 3%;
-  left: 44%;
-  transform: translate(-44%, -3%);
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  background-color: transparent;
-  border: 2px solid #bd9a4a;
-  padding: 15px 32px;
-  color: #000;
-  text-align: center;
-  font-family: "Mulish";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+@media screen and ((max-width: 767px)) {
+  .consultBtn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 10px 20px;
+    color: #000;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+  .presidentBtn {
+    width: 240px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 10px 20px;
+    color: #000;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
 }
-.presidentBtn {
-  position: absolute;
-  bottom: 3%;
-  left: 70%;
-  transform: translate(-70%, -3%);
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  background-color: transparent;
-  border: 2px solid #bd9a4a;
-  padding: 15px 32px;
-  color: #000;
-  text-align: center;
-  font-family: "Mulish";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+@media screen and ((min-width: 768px) and (max-width: 1199px)) {
+  .consultBtn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-right: 20px;
+    width: 200px;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 15px 20px;
+    color: #000;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .presidentBtn {
+    width: 200px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 15px 20px;
+    color: #000;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .consultBtn {
+    width: 300px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-right: 40px;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 15px 32px;
+    color: #000;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .presidentBtn {
+    width: 300px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid #bd9a4a;
+    padding: 15px 32px;
+    color: #000;
+    text-align: center;
+    font-family: "Mulish";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
